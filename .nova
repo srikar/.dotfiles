@@ -1,0 +1,21 @@
+#!/bin/bash
+function n_options() {
+  echo "n <subcommand>"
+  echo "<subcommand> may be 'log', 'options'"
+}
+
+function n() {
+  if [ $# -lt 2 ]
+  then
+    n_options
+    exit
+  fi
+  case $1 in
+    "log" )
+      watch -n 5 "nova console-log --length=40 $2";;
+    "options" )
+      n_options;;
+    * )
+      echo "Not yet supported. But keep your eyes peeled!";;
+  esac
+}

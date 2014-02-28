@@ -4,13 +4,14 @@ export ARCHFLAGS="-arch x86_64"
 PATH_PREFIX=/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin
 NODE_PATH_PREFIX=/usr/local/share/npm/bin/
 export PATH=$PATH_PREFIX:$NODE_PATH_PREFIX:$PATH
+test -f ~/.keystonerc && source ~/.keystonerc
+test -f ~/.dotfiles/.nova && source ~/.dotfiles/.nova
 test -f ~/.dotfiles/.aliases && source ~/.dotfiles/.aliases
 test -f ~/.dotfiles/.bash_prompt && source ~/.dotfiles/.bash_prompt
-test -f ~/.dotfiles/client/.amplify && source ~/.dotfiles/client/.amplify
 test -f ~/.dotfiles/.android && source ~/.dotfiles/.android
-test -f ~/.dotfiles/client/.rl && source ~/.dotfiles/client/.rl
 test -f ~/.dotfiles/.productivity && source ~/.dotfiles/.productivity
-test -f ~/.keystonerc && source ~/.keystonerc
+test -f ~/.dotfiles/client/.amplify && source ~/.dotfiles/client/.amplify
+test -f ~/.dotfiles/client/.rl && source ~/.dotfiles/client/.rl
 eval "$(rbenv init -)"
 
 #pyenv
