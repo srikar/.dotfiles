@@ -1,0 +1,1 @@
+alias mstart="mysql.server start"

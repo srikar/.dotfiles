@@ -1,0 +1,25 @@
+alias eclipse="open -a Eclipse"
+alias md="perl ~/Documents/Markdown_1.0.1/Markdown.pl"
+alias emx="open -a Emacs"
+#vagrant
+alias vshx="vagrant ssh -- -X"
+alias vsh="vagrant ssh"
+alias vup="vagrant up"
+alias vprov="vagrant provision"
+alias v="vagrant"
+#git
+alias gs="git status"
+alias gd="git diff"
+alias gp="git pull --rebase"
+alias g="git"
+#emacs
+alias ems="open -a emacs"
+#ruby
+alias be="bundle exec"
+#vim
+alias vim="mvim -v"
+#commandline
+alias cd="pushd"
+alias j="popd"
+
+alias intellij="open -a 'Intellij IDEA 13'"

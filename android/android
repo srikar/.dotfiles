@@ -1,0 +1,43 @@
+alias ldprof=". ~/.bash_profile"
+
+m() {
+#  while test $# -gt 0; do
+#  done  #@ represents all the arguments, #shift removes the arg
+  case ${1} in
+    devbld)
+      mvn -Dversion.code=3000 -DskipTests=true -Dpmd.skip=true -Dandroid.lint.skip=true clean install
+      ;;
+    sgnbld)
+      mvn -Dversion.code=3000 -DskipTests=true -Dpmd.skip=true -Dandroid.lint.skip=true -Psign clean install
+      ;;
+    dep)
+      mvn android:deploy
+      ;;
+    all)
+      m devbld && m dep
+      ;;
+    *)
+      echo "Usage m [option], where 'option' can be:
+         devbld: generate a dev build of the artifact
+         sgnbld: generated a signed build of the artifact
+         dep: deploy
+         all: generate a devbuild and deploy
+        "
+      ;;
+  esac
+}
+
+a() {
+#  while test $# -gt 0; do
+#  done
+  case ${1} in
+    lp)
+      adb shell pm list packages
+      ;;
+    un)
+      adb shell uninstall ${2}
+      ;;
+    ver)
+      adb shell dumpsys |grep -A18 "Package \[com.amplify.registration\]"
+  esac
+}
