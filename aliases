@@ -12,6 +12,13 @@ alias gs="git status"
 alias gd="git diff"
 alias gp="git pull --rebase"
 alias g="git"
+function gl() {
+  if [ $# -gt 0 ]; then
+    git log --oneline -n $1
+  else
+    git log --oneline
+  fi
+}
 #emacs
 alias ems="open -a emacs"
 #ruby
@@ -23,3 +30,7 @@ alias cd="pushd"
 alias j="popd"
 
 alias intellij="open -a 'Intellij IDEA 13'"
+alias clear_dns_cached="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+#javas
+alias use_java7="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/;export PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/bin/:$PATH"

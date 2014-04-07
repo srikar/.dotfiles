@@ -5,17 +5,18 @@ function n_options() {
 }
 
 function n() {
-  if [ $# -lt 2 ]
+  if [ $# -lt 1 ]
   then
     n_options
-    exit
   fi
   case $1 in
     "log" )
       watch -n 5 "nova console-log --length=40 $2";;
+    "list" )
+      nova list;;
     "options" )
       n_options;;
     * )
-      echo "Not yet supported. But keep your eyes peeled!";;
+      nova "$@"
   esac
 }
