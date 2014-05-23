@@ -9,6 +9,7 @@ test -f ~/.dotfiles/nova && source ~/.dotfiles/nova
 test -f ~/.dotfiles/aliases && source ~/.dotfiles/aliases
 test -f ~/.dotfiles/bash_prompt && source ~/.dotfiles/bash_prompt
 test -f ~/.dotfiles/android && source ~/.dotfiles/android
+test -f ~/.dotfiles/hadoop && source ~/.dotfiles/hadoop
 test -f ~/.dotfiles/productivity && source ~/.dotfiles/productivity
 test -f ~/.dotfiles/client/amplify && source ~/.dotfiles/client/amplify
 test -f ~/.dotfiles/client/rl && source ~/.dotfiles/client/rl

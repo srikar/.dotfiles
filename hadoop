@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function init_avrotools() {
+  ( mkdir -p /usr/local/avrotools && cd /usr/local/avrotools && \
+    rm -rf avro-tools* && wget http://mirrors.gigenet.com/apache/avro/avro-1.7.6/java/avro-tools-1.7.6.jar )
+}
+
+alias avrotools="java -jar /usr/local/avrotools/avro-tools-1.7.6.jar"

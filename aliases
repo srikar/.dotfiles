@@ -19,6 +19,13 @@ function gl() {
     git log --oneline
   fi
 }
+function gld() {
+  if [ $# -gt 0 ]; then
+    git log --oneline --decorate -n $1
+  else
+    git log --oneline --decorate
+  fi
+}
 #emacs
 alias ems="open -a emacs"
 #ruby
@@ -34,3 +41,4 @@ alias clear_dns_cached="dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 
 #javas
 alias use_java7="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/;export PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/bin/:$PATH"
+alias use_java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/;export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/bin/:$PATH"
