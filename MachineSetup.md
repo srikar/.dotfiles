@@ -41,6 +41,10 @@ These are the applications that are installed/managed directly
 
 ##### Development
 
+###### Intellij
+
+- settings
+
 #### Ruby Support
 
 ##### Runtime
@@ -87,3 +91,16 @@ These are the applications that are installed/managed directly
 
 - Virtual Box
 - VMFusion
+
+#### Vim Setup
+
+- .vimrc
+- .vim/
+
+#### Git Setup
+
+- .gitconfig
+
+#### Productivity
+
+- GoogleVoiceAndVideoSetup
