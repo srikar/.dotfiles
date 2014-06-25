@@ -45,6 +45,15 @@ These are the applications that are installed/managed directly
 
 - settings
 
+#### JavaScript support
+
+##### Runtime
+
+##### Development
+
+- nodejs
+- npm
+
 #### Ruby Support
 
 ##### Runtime
@@ -56,6 +65,8 @@ These are the applications that are installed/managed directly
 ##### Runtime
 
 ##### Development
+
+- python virtual environment setup
 
 #### R
 
